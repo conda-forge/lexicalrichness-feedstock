@@ -1,18 +1,18 @@
 {% set name = "lexicalrichness" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.9" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: a25d20cf0113a62ecf62a539eb5854edddb3f7627c8db6b72196f6043fee2859
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 188961d139866ea4645c6412e8536f230243e5e0f02c4f53f23d028902f979cf
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -28,13 +28,13 @@ test:
     - lexicalrichness
 
 about:
-  home: "https://github.com/LSYS/lexicalrichness"
+  home: https://github.com/LSYS/lexicalrichness
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A small module to compute textual lexical richness (aka lexical diversity)."
-  doc_url: "https://github.com/LSYS/LexicalRichness/blob/master/README.rst"
-  dev_url: "https://github.com/LSYS"
+  summary: A small module to compute textual lexical richness (aka lexical diversity).
+  doc_url: https://github.com/LSYS/LexicalRichness/blob/master/README.rst
+  dev_url: https://github.com/LSYS
 
 extra:
   recipe-maintainers:
