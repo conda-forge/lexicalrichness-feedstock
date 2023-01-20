@@ -10,7 +10,7 @@ source:
   sha256: 7225bacf0e51c8b24176a61b2ccb4fecca9074f8d68c3d48a959b6a4810794d8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,6 +22,7 @@ requirements:
     - python >=2.7
     - scipy >=1.0.0
     - textblob >=0.15.3
+    - matplotlib
 
 test:
   imports:
