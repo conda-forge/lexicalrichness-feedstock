@@ -1,5 +1,5 @@
 {% set name = "lexicalrichness" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2c0e23ebcd88bbd078e35f84ddc39eb2435ff787868c1ea484a61453294cdccc
+  sha256: 68fd0e42a102ea2df04d1173e9a3f27b15efc42ea74c3006f9d52c06b73a591a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
