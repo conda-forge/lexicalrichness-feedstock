@@ -1,11 +1,11 @@
-About lexicalrichness
-=====================
+About lexicalrichness-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lexicalrichness-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/LSYS/lexicalrichness
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lexicalrichness-feedstock/blob/main/LICENSE.txt)
 
 Summary: A small module to compute textual lexical richness (aka lexical diversity).
 
