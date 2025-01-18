@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 128734f0347c5c0a5a21f7b8e505ba79d5d54a45a7cf21b063902c5b0034c82d
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python {{ python_min }}
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - scipy >=1.0.0
     - textblob >=0.15.3
     - matplotlib
     - pandas
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - lexicalrichness
 
